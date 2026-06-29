@@ -27,8 +27,10 @@
   border-color: var(--color-border);
 }
 
-html {
-  scroll-behavior: auto;
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -43,7 +45,7 @@ body {
   letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.5;
 }
 
@@ -237,20 +239,27 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  height: 3rem;
+  height: 3.8rem;
   text-decoration: none;
 }
 
 @media (min-width: 768px) {
   .logo-link {
-    height: 4rem;
+    height: 5.5rem;
   }
 }
 
 .logo-img {
-  height: 500%;
+  height: 300%;
+  max-height: 300%;
   width: auto;
   object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .logo-img {
+    max-height: 4.8rem;
+  }
 }
 
 .nav-menu {
@@ -479,6 +488,12 @@ textarea {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.mobile-clock-container svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
 }
 
 .mobile-text-container {

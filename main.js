@@ -28,7 +28,7 @@ function initSmoothScroll() {
 function initCustomCursor() {
   const ring = document.getElementById('custom-cursor-ring');
   const dot = document.getElementById('custom-cursor-dot');
-  
+
   const mq = window.matchMedia("(min-width: 1024px) and (hover: hover)");
   if (!mq.matches) return;
 
@@ -70,7 +70,7 @@ function initLoader() {
       setTimeout(() => {
         loaderOverlay.classList.add('dark-stage');
         filledImages.forEach(img => img.classList.add('hidden-stage'));
-        
+
         // Out stage
         setTimeout(() => {
           gsap.to(loaderOverlay, {
@@ -110,7 +110,7 @@ function initClock() {
   const hourHand = document.getElementById('clock-hour');
   const minHand = document.getElementById('clock-min');
   const secHand = document.getElementById('clock-sec');
-  
+
   const hourHandMob = document.getElementById('clock-hour-mob');
   const minHandMob = document.getElementById('clock-min-mob');
   const secHandMob = document.getElementById('clock-sec-mob');
@@ -129,7 +129,7 @@ function initClock() {
     if (hourHand) hourHand.setAttribute('transform', `rotate(${hourAngle} 260 260)`);
     if (minHand) minHand.setAttribute('transform', `rotate(${minAngle} 260 260)`);
     if (secHand) secHand.setAttribute('transform', `rotate(${secAngle} 260 260)`);
-    
+
     if (hourHandMob) hourHandMob.setAttribute('transform', `rotate(${hourAngle} 260 260)`);
     if (minHandMob) minHandMob.setAttribute('transform', `rotate(${minAngle} 260 260)`);
     if (secHandMob) secHandMob.setAttribute('transform', `rotate(${secAngle} 260 260)`);
@@ -148,7 +148,7 @@ function initBubbleLetters() {
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    
+
     letters.forEach(span => {
       const rect = span.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
@@ -157,7 +157,7 @@ function initBubbleLetters() {
       const dy = mouseY - cy;
       const d = Math.sqrt(dx * dx + dy * dy);
       const radius = 180;
-      
+
       const scale = d < radius ? 1 + (1 - d / radius) * 0.55 : 1;
       span.style.transform = `scale(${scale})`;
     });
@@ -212,11 +212,11 @@ function initScrollAnimations() {
   // Brand Statement Scroll animations (Translate Y and Fade text)
   const brandContent = document.querySelector('.brand-content');
   if (brandContent) {
-    gsap.fromTo(brandContent, 
+    gsap.fromTo(brandContent,
       { y: 80, opacity: 0.3 },
-      { 
-        y: -80, 
-        opacity: 1, 
+      {
+        y: -80,
+        opacity: 1,
         scrollTrigger: {
           trigger: '.brand-section',
           start: "top bottom",
@@ -272,17 +272,39 @@ function initContactForm() {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = "THANK YOU — WE'LL BE IN TOUCH";
-      submitBtn.style.backgroundColor = "var(--color-violet)";
-      
-      form.reset();
 
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.style.backgroundColor = "";
-      }, 4000);
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = "SENDING...";
+      submitBtn.disabled = true;
+
+      // Note: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS dashboard credentials.
+      // We are using the Public Key provided: 'service_6gpz3xq'.
+      const serviceID = 'service_6gpz3xq';
+      const templateID = 'template_xki0xld';
+      const publicKey = 'mOy0-J6Ff3ygY9tAI';
+
+      emailjs.sendForm(serviceID, templateID, form, publicKey)
+        .then(() => {
+          submitBtn.innerHTML = "THANK YOU — WE'LL BE IN TOUCH";
+          submitBtn.style.backgroundColor = "var(--color-violet)";
+          form.reset();
+          submitBtn.disabled = false;
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.backgroundColor = "";
+          }, 4000);
+        }, (error) => {
+          console.error('EmailJS Error:', error);
+          submitBtn.innerHTML = "ERROR — TRY AGAIN";
+          submitBtn.style.backgroundColor = "#ff2b2b";
+          submitBtn.disabled = false;
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.backgroundColor = "";
+          }, 4000);
+        });
     });
   }
 }
@@ -297,7 +319,7 @@ if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {
     mobileMenu.classList.add('open');
     body.style.overflow = 'hidden';
-    
+
     // Stagger links animation
     mobileLinks.forEach((link, i) => {
       link.style.transitionDelay = `${0.1 + i * 0.06}s`;
@@ -309,7 +331,7 @@ function closeMobileMenu() {
   if (mobileMenu) {
     mobileMenu.classList.remove('open');
     body.style.overflow = '';
-    
+
     mobileLinks.forEach(link => {
       link.style.transitionDelay = '0s';
     });
