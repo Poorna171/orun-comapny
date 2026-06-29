@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORYN LABS — AI Engineering & Digital Solutions</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Oryn Labs builds exceptional digital products, custom websites, brand identities, and AI-driven solutions. We engineer what's next for your business.">
+  <meta name="keywords"
+    content="Oryn Labs, Oryn, AI engineering, custom website development, corporate branding, UI UX design, software development, AI consulting, web app developer, digital studio, machine learning integration, business automation">
+  <meta name="author" content="Oryn Labs">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orynlabs.com/">
+  <meta property="og:title" content="Oryn Labs — Premier AI Engineering, Custom Websites & Branding">
+  <meta property="og:description"
+    content="Oryn Labs transforms bold ideas into premium digital products. We build custom websites, corporate branding, and production-grade AI solutions.">
+  <meta property="og:image" content="assets/oryn-symbol.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://orynlabs.com/">
+  <meta property="twitter:title" content="Oryn Labs — Premier AI Engineering, Custom Websites & Branding">
+  <meta property="twitter:description"
+    content="Oryn Labs transforms bold ideas into premium digital products. We build custom websites, corporate branding, and production-grade AI solutions.">
+  <meta property="twitter:image" content="assets/oryn-symbol.png">
+
+  <!-- Structured Data / JSON-LD for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Oryn Labs",
+    "alternateName": "Oryn",
+    "url": "https://orynlabs.com/", 
+    "logo": "https://orynlabs.com/assets/oryn-symbol.png",
+    "description": "Oryn Labs is a premier digital studio engineering advanced AI solutions, custom software, websites, and brand identities.",
+    "telephone": "+919632293345",
+    "email": "orynlabss@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://instagram.com/orynlabss",
+      "https://wa.me/919632293345"
+    ],
+    "areaServed": "Worldwide",
+    "serviceType": [
+      "AI Engineering",
+      "Custom Software Development",
+      "Web Design & Development",
+      "Branding & UI/UX Design"
+    ]
+  }
+  </script>
+
+  <!-- CSS CDNs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg"
+    href="C:\Users\Poornatejas\OneDrive\Desktop\oryncompany updated\oryncompany-main\assets\logo-footer-new.png">
+
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor-ring" class="custom-cursor-ring" aria-hidden="true"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot" aria-hidden="true"></div>
+
+  <!-- Loader Overlay -->
+  <div id="loader-overlay" class="loader-overlay">
+    <div class="loader-container">
+      <img src="assets/oryn-outline-t.png" alt="ORYN" class="loader-img-outline">
+      <img src="assets/oryn-filled-t.png" alt="" class="loader-img-filled"
+        style="clip-path: inset(0 72.67% 0 0); -webkit-clip-path: inset(0 72.67% 0 0);">
+      <img src="assets/oryn-filled-t.png" alt="" class="loader-img-filled"
+        style="clip-path: inset(0 46.99% 0 27.33%); -webkit-clip-path: inset(0 46.99% 0 27.33%);">
+      <img src="assets/oryn-filled-t.png" alt="" class="loader-img-filled"
+        style="clip-path: inset(0 22.09% 0 52.99%); -webkit-clip-path: inset(0 22.09% 0 52.99%);">
+      <img src="assets/oryn-filled-t.png" alt="" class="loader-img-filled"
+        style="clip-path: inset(0 0 0 77.91%); -webkit-clip-path: inset(0 0 0 77.91%);">
+    </div>
+  </div>
+
+  <!-- Main Website Shell -->
+  <div id="main-content" style="opacity: 0; transition: opacity 0.5s ease;">
+
+    <!-- Navigation Bar -->
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="#home" class="logo-link" aria-label="Oryn Labs home">
+          <img src="assets/logo-navbar-new.png" alt="ORYN LABS" class="logo-img" height="200" width="300">
+        </a>
+        <nav class="nav-menu">
+          <a href="#home" class="nav-link">
+            <span>Home<span class="nav-link-underline"></span></span>
+          </a>
+          <a href="#services" class="nav-link">
+            <span>Services<span class="nav-link-underline"></span></span>
+          </a>
+          <a href="#clients" class="nav-link">
+            <span>Clients<span class="nav-link-underline"></span></span>
+          </a>
+          <a href="#testimonials" class="nav-link">
+            <span>Testimonials<span class="nav-link-underline"></span></span>
+          </a>
+          <a href="#contact" class="nav-link">
+            <span>Contact<span class="nav-link-underline"></span></span>
+          </a>
+        </nav>
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Open menu">
+          <span class="sr-only">Menu</span>
+          <div class="hamburger-icon">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="#home" class="logo-link" aria-label="Oryn Labs home" style="height: 3rem;">
+            <img src="assets/logo-navbar-new.png" alt="ORYN LABS" class="logo-img">
+          </a>
+          <button id="close-menu" class="close-menu-btn" aria-label="Close menu">✕</button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#services" class="mobile-nav-link">Services</a>
+          <a href="#clients" class="mobile-nav-link">Clients</a>
+          <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto"
+          src="assets/WhatsApp Video 2026-06-29 at 14.08.46 (1).mp4"></video>
+        <div class="hero-overlay"></div>
+
+        <!-- Desktop Layout -->
+        <div class="hero-content-desktop container">
+          <div class="hero-grid">
+            <div class="hero-text-col">
+              <h1 class="hero-title text-display">
+                <span>f</span><span>u</span><span>t</span><span>u</span><span>r</span><span>e</span>
+              </h1>
+              <p class="hero-subtitle track-wide">IS HERE !</p>
+            </div>
+            <div class="hero-clock-col">
+              <!-- Analog Clock SVG -->
+              <svg width="520" height="520" viewBox="0 0 520 520" class="select-none"
+                style="filter: drop-shadow(0 0 20px rgba(255,255,255,0.06));">
+                <!-- Ticks -->
+                <line x1="260" y1="20" x2="260" y2="48" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="380" y1="52" x2="368" y2="72" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="468" y1="140" x2="448" y2="152" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="500" y1="260" x2="472" y2="260" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="468" y1="380" x2="448" y2="368" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="380" y1="468" x2="368" y2="448" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="260" y1="500" x2="260" y2="472" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="140" y1="468" x2="152" y2="448" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="52" y1="380" x2="72" y2="368" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="20" y1="260" x2="48" y2="260" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="52" y1="140" x2="72" y2="152" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+                <line x1="140" y1="52" x2="152" y2="72" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                  opacity="0.95" />
+
+                <!-- Hour hand -->
+                <line id="clock-hour" x1="260" y1="260" x2="260" y2="120" stroke="#fff" stroke-width="3.2"
+                  stroke-linecap="round" />
+                <!-- Minute hand -->
+                <line id="clock-min" x1="260" y1="260" x2="260" y2="60" stroke="#fff" stroke-width="2"
+                  stroke-linecap="round" />
+                <!-- Second hand -->
+                <line id="clock-sec" x1="260" y1="290" x2="260" y2="30" stroke="#ff2b2b" stroke-width="1.4"
+                  stroke-linecap="round" />
+
+                <!-- Center pins -->
+                <circle cx="260" cy="260" r="4" fill="none" stroke="#fff" stroke-width="1.2" />
+                <circle cx="260" cy="260" r="1.4" fill="#ff2b2b" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Layout -->
+        <div class="hero-content-mobile">
+          <div class="mobile-clock-container">
+            <svg width="320" height="320" viewBox="0 0 520 520" class="select-none"
+              style="filter: drop-shadow(0 0 16px rgba(255,255,255,0.06));">
+              <!-- Ticks -->
+              <line x1="260" y1="20" x2="260" y2="48" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="380" y1="52" x2="368" y2="72" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="468" y1="140" x2="448" y2="152" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="500" y1="260" x2="472" y2="260" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="468" y1="380" x2="448" y2="368" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="380" y1="468" x2="368" y2="448" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="260" y1="500" x2="260" y2="472" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="140" y1="468" x2="152" y2="448" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="52" y1="380" x2="72" y2="368" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="20" y1="260" x2="48" y2="260" stroke="#fff" stroke-width="2.4" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="52" y1="140" x2="72" y2="152" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+              <line x1="140" y1="52" x2="152" y2="72" stroke="#fff" stroke-width="1.6" stroke-linecap="round"
+                opacity="0.95" />
+
+              <!-- Hour hand -->
+              <line id="clock-hour-mob" x1="260" y1="260" x2="260" y2="120" stroke="#fff" stroke-width="3.2"
+                stroke-linecap="round" />
+              <!-- Minute hand -->
+              <line id="clock-min-mob" x1="260" y1="260" x2="260" y2="60" stroke="#fff" stroke-width="2"
+                stroke-linecap="round" />
+              <!-- Second hand -->
+              <line id="clock-sec-mob" x1="260" y1="290" x2="260" y2="30" stroke="#ff2b2b" stroke-width="1.4"
+                stroke-linecap="round" />
+
+              <!-- Center pins -->
+              <circle cx="260" cy="260" r="4" fill="none" stroke="#fff" stroke-width="1.2" />
+              <circle cx="260" cy="260" r="1.4" fill="#ff2b2b" />
+            </svg>
+          </div>
+          <div class="mobile-text-container">
+            <h1 class="mobile-title text-display">future</h1>
+            <p class="mobile-subtitle track-wide">IS HERE !</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand Statement Section -->
+      <section class="brand-section">
+        <div class="brand-wrapper">
+          <div class="absolute inset-0 purple-drift"
+            style="background: radial-gradient(circle at center, #18092c 0%, #000000 100%);"></div>
+          <img src="assets/purple_bg.png" alt="" class="brand-bg-img purple-drift" onerror="this.style.opacity='0';">
+          <div class="brand-overlay"></div>
+          <div class="brand-content">
+            <h2 class="brand-title">Every Great Company Starts With One Bold Idea.</h2>
+            <p class="brand-desc">
+              Oryn Labs transforms that idea into exceptional digital products and AI-driven solutions.
+              From concept to success — we build what's next.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients Swiper Showcase -->
+      <section id="clients" class="clients-section">
+        <div class="container">
+          <h2 class="clients-title">Clients We've Worked With</h2>
+          <p class="clients-subtitle track-wide">A SELECTION OF RECENT PARTNERSHIPS</p>
+
+          <div class="swiper-container-outer">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <!-- Duplicate slides for Swiper Loop -->
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://svcnedu.in" target="_blank" rel="noreferrer" class="client-slide-link">
+                    <img src="https://image.thum.io/get/width/1000/crop/700/noanimate/https://svcnedu.in"
+                      alt="SVCN Educational Institutions" class="client-slide-img" onerror="this.style.display='none';">
+                  </a>
+                  <p class="client-slide-name">SVCN Educational Institutions</p>
+                </div>
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://vibhainternationalschool.in" target="_blank" rel="noreferrer"
+                    class="client-slide-link">
+                    <img src="assets/vibha-cover.png" alt="Vibha International School" class="client-slide-img">
+                  </a>
+                  <p class="client-slide-name">Vibha International School</p>
+                </div>
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://vscarifleshootingtmk.com" target="_blank" rel="noreferrer" class="client-slide-link">
+                    <img src="https://image.thum.io/get/width/1000/crop/700/noanimate/https://vscarifleshootingtmk.com"
+                      alt="VSCA Rifle Shooting Academy" class="client-slide-img" onerror="this.style.display='none';">
+                  </a>
+                  <p class="client-slide-name">VSCA Rifle Shooting Academy</p>
+                </div>
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://eskillate.in" target="_blank" rel="noreferrer" class="client-slide-link">
+                    <img src="https://image.thum.io/get/width/1000/crop/700/noanimate/https://eskillate.in"
+                      alt="Eskillate" class="client-slide-img" onerror="this.style.display='none';">
+                  </a>
+                  <p class="client-slide-name">Eskillate</p>
+                </div>
+                <!-- Loop duplicates -->
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://svcnedu.in" target="_blank" rel="noreferrer" class="client-slide-link">
+                    <img src="https://image.thum.io/get/width/1000/crop/700/noanimate/https://svcnedu.in"
+                      alt="SVCN Educational Institutions" class="client-slide-img" onerror="this.style.display='none';">
+                  </a>
+                  <p class="client-slide-name">SVCN Educational Institutions</p>
+                </div>
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://vibhainternationalschool.in" target="_blank" rel="noreferrer"
+                    class="client-slide-link">
+                    <img src="assets/vibha-cover.png" alt="Vibha International School" class="client-slide-img">
+                  </a>
+                  <p class="client-slide-name">Vibha International School</p>
+                </div>
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://vscarifleshootingtmk.com" target="_blank" rel="noreferrer" class="client-slide-link">
+                    <img src="https://image.thum.io/get/width/1000/crop/700/noanimate/https://vscarifleshootingtmk.com"
+                      alt="VSCA Rifle Shooting Academy" class="client-slide-img" onerror="this.style.display='none';">
+                  </a>
+                  <p class="client-slide-name">VSCA Rifle Shooting Academy</p>
+                </div>
+                <div class="swiper-slide" style="width: min(560px, 80vw);">
+                  <a href="https://eskillate.in" target="_blank" rel="noreferrer" class="client-slide-link">
+                    <img src="https://image.thum.io/get/width/1000/crop/700/noanimate/https://eskillate.in"
+                      alt="Eskillate" class="client-slide-img" onerror="this.style.display='none';">
+                  </a>
+                  <p class="client-slide-name">Eskillate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Sticky Stacked Cards Section -->
+      <section id="services" class="services-section">
+        <div class="services-ambient-glow"></div>
+        <div class="services-grid-overlay"></div>
+
+        <!-- Interactive floating background dots -->
+        <div class="particles-container">
+          <span class="particle"
+            style="left: 12%; top: 22%; width: 2.1px; height: 2.1px; animation: floatY 11s ease-in-out -1.2s infinite;"></span>
+          <span class="particle"
+            style="left: 45%; top: 78%; width: 1.5px; height: 1.5px; animation: floatY 9s ease-in-out -3s infinite;"></span>
+          <span class="particle"
+            style="left: 78%; top: 34%; width: 2px; height: 2px; animation: floatY 13s ease-in-out -0.5s infinite;"></span>
+          <span class="particle"
+            style="left: 23%; top: 62%; width: 1.2px; height: 1.2px; animation: floatY 7s ease-in-out -5.6s infinite;"></span>
+          <span class="particle"
+            style="left: 62%; top: 18%; width: 1.8px; height: 1.8px; animation: floatY 10s ease-in-out -2.1s infinite;"></span>
+          <span class="particle"
+            style="left: 88%; top: 82%; width: 2.5px; height: 2.5px; animation: floatY 14s ease-in-out -4.2s infinite;"></span>
+        </div>
+
+        <div class="services-header">
+          <p class="track-wide text-[10px]" style="color: rgba(255,255,255,0.5);">WHAT WE DO</p>
+          <h2 class="services-title">Three disciplines. One studio.</h2>
+          <p class="services-subtitle">Scroll down to explore how Oryn Labs engineers digital success.</p>
+        </div>
+
+        <!-- Sticky Stacked Cards Layout -->
+        <div class="services-stacked-container">
+
+          <!-- Card 1: AI Engineering -->
+          <div class="service-sticky-card glass" id="card-ai">
+            <div class="card-left-content">
+              <div class="card-icon-box">
+                <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M9.5 9C9.5 8.17157 10.1716 7.5 11 7.5H13C13.8284 7.5 14.5 8.17157 14.5 9V11C14.5 11.8284 13.8284 12.5 13 12.5H11C10.1716 12.5 9.5 11.8284 9.5 11V9Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="card-tag">Intelligence, engineered.</p>
+              <h3 class="card-title">AI Engineering</h3>
+              <p class="card-desc">Custom AI agents, LLM integrations, and machine intelligence engineered into
+                production-grade systems.</p>
+              <a href="#contact" class="card-btn">
+                Explore Service
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-right-content">
+              <h4 class="features-header">Capabilities</h4>
+              <ul class="features-list">
+                <li class="feature-item"><span class="feature-dot"></span>AI Agents</li>
+                <li class="feature-item"><span class="feature-dot"></span>Workflow Automation</li>
+                <li class="feature-item"><span class="feature-dot"></span>LLM Integrations</li>
+                <li class="feature-item"><span class="feature-dot"></span>Computer Vision</li>
+                <li class="feature-item"><span class="feature-dot"></span>Predictive Analytics</li>
+                <li class="feature-item"><span class="feature-dot"></span>AI Consulting</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: Custom Software -->
+          <div class="service-sticky-card glass" id="card-software">
+            <div class="card-left-content">
+              <div class="card-icon-box">
+                <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M8 9.5L4 12.5L8 15.5 M16 9.5L20 12.5L16 15.5 M14 6.5L10 18.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="card-tag">Built for scale.</p>
+              <h3 class="card-title">Custom Software</h3>
+              <p class="card-desc">Web apps, SaaS platforms, ERP, CRM, mobile and cloud — scalable digital products
+                engineered end-to-end.</p>
+              <a href="#contact" class="card-btn">
+                Explore Service
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-right-content">
+              <h4 class="features-header">Capabilities</h4>
+              <ul class="features-list">
+                <li class="feature-item"><span class="feature-dot"></span>Web Applications</li>
+                <li class="feature-item"><span class="feature-dot"></span>SaaS Platforms</li>
+                <li class="feature-item"><span class="feature-dot"></span>Mobile Apps</li>
+                <li class="feature-item"><span class="feature-dot"></span>ERP & CRM</li>
+                <li class="feature-item"><span class="feature-dot"></span>APIs & Integrations</li>
+                <li class="feature-item"><span class="feature-dot"></span>Cloud Infrastructure</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: Branding -->
+          <div class="service-sticky-card glass" id="card-branding">
+            <div class="card-left-content">
+              <div class="card-icon-box">
+                <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 17A5 5 0 1 0 12 7A5 5 0 0 0 12 17Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="card-tag">Identity with intent.</p>
+              <h3 class="card-title">Branding</h3>
+              <p class="card-desc">Brand identity, UI/UX, logo systems, visual storytelling and complete digital
+                branding for modern companies.</p>
+              <a href="#contact" class="card-btn">
+                Explore Service
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <div class="card-right-content">
+              <h4 class="features-header">Capabilities</h4>
+              <ul class="features-list">
+                <li class="feature-item"><span class="feature-dot"></span>Brand Identity</li>
+                <li class="feature-item"><span class="feature-dot"></span>Logo Systems</li>
+                <li class="feature-item"><span class="feature-dot"></span>UI / UX Design</li>
+                <li class="feature-item"><span class="feature-dot"></span>Visual Storytelling</li>
+                <li class="feature-item"><span class="feature-dot"></span>Social Creatives</li>
+                <li class="feature-item"><span class="feature-dot"></span>Design Systems</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- AI Quote Backdrop Video Section -->
+      <section class="quote-section">
+        <div class="quote-wrapper">
+          <div class="quote-video-container">
+            <video src="assets/fower1.mp4" autoplay muted loop playsinline class="quote-video"></video>
+          </div>
+          <div class="quote-overlay"></div>
+          <div class="quote-content">
+            <h2 id="quote-title" class="quote-title">Tomorrow belongs to those who build it today.</h2>
+            <p class="quote-author track-wide">— ORYN LABS</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Marquee Section -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="container">
+          <p class="testimonials-label track-wide">TESTIMONIALS</p>
+          <h2 class="testimonials-title font-sackers">Trusted by ambitious teams</h2>
+        </div>
+
+        <div class="marquee-rows-container">
+          <!-- Row 1: left marquee -->
+          <div class="marquee-wrapper marquee-pause no-scrollbar">
+            <div class="marquee-row marquee-left">
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Oryn Labs delivered a platform that exceeded every expectation. Pure craft."
+                </p>
+                <p class="marquee-author track-wide">SVCN EDUCATIONAL INSTITUTIONS</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Working with the Oryn team felt like having an in-house product studio."</p>
+                <p class="marquee-author track-wide">VIBHA INTERNATIONAL SCHOOL</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Stunning design, ruthless attention to detail, and impeccable engineering."
+                </p>
+                <p class="marquee-author track-wide">VSCA RIFLE SHOOTING ACADEMY</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"They turned a rough idea into a polished product faster than we thought
+                  possible."</p>
+                <p class="marquee-author track-wide">ESKILLATE</p>
+              </div>
+              <!-- Loop duplicates -->
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Oryn Labs delivered a platform that exceeded every expectation. Pure craft."
+                </p>
+                <p class="marquee-author track-wide">SVCN EDUCATIONAL INSTITUTIONS</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Working with the Oryn team felt like having an in-house product studio."</p>
+                <p class="marquee-author track-wide">VIBHA INTERNATIONAL SCHOOL</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Stunning design, ruthless attention to detail, and impeccable engineering."
+                </p>
+                <p class="marquee-author track-wide">VSCA RIFLE SHOOTING ACADEMY</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"They turned a rough idea into a polished product faster than we thought
+                  possible."</p>
+                <p class="marquee-author track-wide">ESKILLATE</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: right marquee -->
+          <div class="marquee-wrapper marquee-pause no-scrollbar">
+            <div class="marquee-row marquee-right">
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"The new identity has completely transformed how our audience sees us."</p>
+                <p class="marquee-author track-wide">ESKILLATE</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Premium, precise, and on time. Highly recommended."</p>
+                <p class="marquee-author track-wide">VSCA RIFLE SHOOTING ACADEMY</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Our online presence finally feels worthy of what we do every day."</p>
+                <p class="marquee-author track-wide">VIBHA INTERNATIONAL SCHOOL</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"A rare blend of design taste and serious technical depth."</p>
+                <p class="marquee-author track-wide">SVCN EDUCATIONAL INSTITUTIONS</p>
+              </div>
+              <!-- Loop duplicates -->
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"The new identity has completely transformed how our audience sees us."</p>
+                <p class="marquee-author track-wide">ESKILLATE</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Premium, precise, and on time. Highly recommended."</p>
+                <p class="marquee-author track-wide">VSCA RIFLE SHOOTING ACADEMY</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"Our online presence finally feels worthy of what we do every day."</p>
+                <p class="marquee-author track-wide">VIBHA INTERNATIONAL SCHOOL</p>
+              </div>
+              <div class="marquee-card glass">
+                <p class="marquee-quote">"A rare blend of design taste and serious technical depth."</p>
+                <p class="marquee-author track-wide">SVCN EDUCATIONAL INSTITUTIONS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="contact-card-frame">
+          <!-- Left side graphic -->
+          <div class="contact-left-col">
+            <img src="assets/contact-bg.jpg" alt="" class="contact-bg-img" loading="lazy">
+            <div class="contact-left-overlay"></div>
+            <p class="contact-label track-wide">WORK WITH US TODAY</p>
+            <div class="contact-info-box">
+              <h2 class="contact-title">Ready to<br>Upgrade?</h2>
+              <p class="contact-desc">
+                Tell us about your idea — we'll respond within one business day with a plan to make it real.
+              </p>
+
+            </div>
+          </div>
+          <!-- Right side form -->
+          <div class="contact-right-col">
+            <form id="contact-form" class="contact-form">
+              <div>
+                <label class="form-group-label track-wide">EMAIL</label>
+                <input required type="email" name="email" class="form-input">
+              </div>
+              <div>
+                <label class="form-group-label track-wide">FIRST NAME</label>
+                <input required type="text" name="first" class="form-input">
+              </div>
+              <div>
+                <label class="form-group-label track-wide">COMPANY NAME</label>
+                <input required type="text" name="company" class="form-input">
+              </div>
+              <div>
+                <label class="form-group-label track-wide">HOW CAN WE HELP?</label>
+                <textarea rows="3" required name="message" class="form-input form-textarea"></textarea>
+              </div>
+              <button id="submit-btn" type="submit" class="submit-btn track-wide">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top-row">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <img
+              src="C:\Users\Poornatejas\OneDrive\Desktop\oryncompany updated\oryncompany-main\assets\oryn_white-removebg-preview.png"
+              alt="ORYN LABS" class="footer-logo-img" height="1000" width="1000">
+          </div>
+
+          <div class="footer-social-menu">
+            <!-- Instagram Link -->
+            <a href="https://instagram.com/orynlabss" target="_blank" rel="noreferrer" aria-label="Instagram"
+              class="social-link-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <!-- WhatsApp Link -->
+            <a href="https://wa.me/919632293345" target="_blank" rel="noreferrer" aria-label="WhatsApp"
+              class="social-link-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </a>
+            <!-- Email Link -->
+            <a href="mailto:orynlabss@gmail.com" target="_blank" rel="noreferrer" aria-label="Email"
+              class="social-link-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom-row">
+          <p class="footer-copyright track-wide">© 2026 ORYN LABS — ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Action contact panel -->
+    <div id="floating-contact" class="floating-contact-container">
+      <a href="https://wa.me/919632293345" target="_blank" rel="noreferrer" aria-label="WhatsApp"
+        class="floating-action-link" style="transition-delay: 0.15s;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+      </a>
+      <a href="https://instagram.com/orynlabss" target="_blank" rel="noreferrer" aria-label="Instagram"
+        class="floating-action-link" style="transition-delay: 0.1s;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      </a>
+      <a href="mailto:orynlabss@gmail.com" target="_blank" rel="noreferrer" aria-label="Email"
+        class="floating-action-link" style="transition-delay: 0.05s;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      </a>
+      <a href="tel:+919632293345" target="_blank" rel="noreferrer" aria-label="Phone" class="floating-action-link"
+        style="transition-delay: 0s;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+      </a>
+      <button id="floating-trigger" class="floating-trigger-btn" aria-label="Open contact">
+        <span class="floating-trigger-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Script CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Local Script -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
