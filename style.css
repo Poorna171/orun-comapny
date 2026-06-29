@@ -29,6 +29,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   overflow-x: clip;
   max-width: 100%;
 }
@@ -47,6 +48,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
   line-height: 1.5;
+}
+
+@media (max-width: 1023px) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 /* Custom Cursor support for large screens */
