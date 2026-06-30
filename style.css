@@ -244,14 +244,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1.25rem;
+  padding: 0.6rem 1.25rem;
   max-width: 1500px;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .nav-container {
-    padding: 1.5rem 2.5rem;
+    padding: 0.8rem 2.5rem;
   }
 }
 
@@ -259,13 +259,13 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  height: 3.8rem;
+  height: 2.4rem;
   text-decoration: none;
 }
 
 @media (min-width: 768px) {
   .logo-link {
-    height: 5.5rem;
+    height: 3.6rem;
   }
 }
 
