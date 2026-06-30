@@ -40,6 +40,15 @@ function initCustomCursor() {
   window.addEventListener('mousemove', (e) => {
     mx = e.clientX;
     my = e.clientY;
+
+    const isOverWhiteBg = e.target.closest('.contact-right-col, .footer-container');
+    if (isOverWhiteBg) {
+      if (ring) ring.classList.add('cursor-black');
+      if (dot) dot.classList.add('cursor-black');
+    } else {
+      if (ring) ring.classList.remove('cursor-black');
+      if (dot) dot.classList.remove('cursor-black');
+    }
   });
 
   function tick() {
@@ -270,6 +279,15 @@ function initContactForm() {
   const submitBtn = document.getElementById('submit-btn');
 
   if (form) {
+    const publicKey = 'mOy0-J6Ff3ygY9tAI';
+    
+    // Initialize EmailJS globally for v4
+    if (window.emailjs) {
+      emailjs.init({
+        publicKey: publicKey
+      });
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -277,16 +295,68 @@ function initContactForm() {
       submitBtn.innerHTML = "SENDING...";
       submitBtn.disabled = true;
 
-      // Note: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS dashboard credentials.
-      // We are using the Public Key provided: 'service_6gpz3xq'.
       const serviceID = 'service_6gpz3xq';
       const templateID = 'template_xki0xld';
-      const publicKey = 'mOy0-J6Ff3ygY9tAI';
 
-      emailjs.sendForm(serviceID, templateID, form, publicKey)
+      // Select the inputs
+      const nameInput = form.querySelector('[name="from_name"]');
+      const emailInput = form.querySelector('[name="from_email"]');
+      const companyInput = form.querySelector('[name="company"]');
+      const messageInput = form.querySelector('[name="message"]');
+
+      // Temporarily rename input names to match EmailJS template variables exactly
+      nameInput.name = 'FIRST NAME';
+      emailInput.name = 'Email';
+      companyInput.name = 'COMPANY NAME '; // with trailing space
+      messageInput.name = 'HOW CAN WE HELP';
+
+      // Create backup hidden inputs to cover variables with/without trailing spaces or other casing
+      const hiddenInputs = [];
+      const addHiddenInput = (name, value) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+        hiddenInputs.push(input);
+      };
+
+      // Add backups for company name
+      addHiddenInput('COMPANY NAME', companyInput.value); // without trailing space
+      addHiddenInput('company_name', companyInput.value);
+      addHiddenInput('company', companyInput.value);
+      addHiddenInput('COMAPNY NAME', companyInput.value);
+      addHiddenInput('COMAPNY NAME ', companyInput.value);
+      addHiddenInput('comapny name', companyInput.value);
+
+      // Add backup for email
+      addHiddenInput('email', emailInput.value);
+
+      // Add backups for name
+      addHiddenInput('name', nameInput.value);
+      addHiddenInput('FIRST NAME ', nameInput.value);
+
+      // Add backups for HOW CAN WE HELP / message
+      addHiddenInput('HOW CAN WE HELP ', messageInput.value);
+      addHiddenInput('message', messageInput.value);
+
+      // Add time
+      addHiddenInput('time', new Date().toLocaleString());
+
+      emailjs.sendForm(serviceID, templateID, form, {
+        publicKey: publicKey
+      })
         .then(() => {
           submitBtn.innerHTML = "THANK YOU — WE'LL BE IN TOUCH";
           submitBtn.style.backgroundColor = "var(--color-violet)";
+          
+          // Reset names back to original
+          nameInput.name = 'from_name';
+          emailInput.name = 'from_email';
+          companyInput.name = 'company';
+          messageInput.name = 'message';
+          hiddenInputs.forEach(input => input.remove());
+
           form.reset();
           submitBtn.disabled = false;
 
@@ -298,6 +368,14 @@ function initContactForm() {
           console.error('EmailJS Error:', error);
           submitBtn.innerHTML = "ERROR — TRY AGAIN";
           submitBtn.style.backgroundColor = "#ff2b2b";
+
+          // Reset names back to original
+          nameInput.name = 'from_name';
+          emailInput.name = 'from_email';
+          companyInput.name = 'company';
+          messageInput.name = 'message';
+          hiddenInputs.forEach(input => input.remove());
+
           submitBtn.disabled = false;
 
           setTimeout(() => {

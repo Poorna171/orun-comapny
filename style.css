@@ -135,6 +135,13 @@ textarea {
   transform: translate(-100px, -100px);
   will-change: transform;
   display: none;
+  transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.custom-cursor-ring.cursor-black {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.05) 50%, transparent 70%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4), 0 0 60px rgba(168, 85, 247, 0.15);
+  mix-blend-mode: normal;
 }
 
 .custom-cursor-dot {
@@ -151,6 +158,12 @@ textarea {
   transform: translate(-100px, -100px);
   will-change: transform;
   display: none;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.custom-cursor-dot.cursor-black {
+  background-color: #000000;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 1024px) {
