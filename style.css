@@ -234,10 +234,8 @@ textarea {
   top: 0;
   width: 100%;
   z-index: 50;
-  background-color: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: transparent;
+  border-bottom: none;
 }
 
 .nav-container {
@@ -1261,7 +1259,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.25rem;
 }
 
 @media (min-width: 768px) {
@@ -1272,7 +1270,7 @@ textarea {
 }
 
 .footer-logo-img {
-  height: 4.5rem;
+  height: 7.5rem;
   width: auto;
   object-fit: contain;
 }
